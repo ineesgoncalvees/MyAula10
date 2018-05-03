@@ -3,13 +3,39 @@
 namespace Aula10
 {
     /// <summary>Classe que representa uma mochila ou saco que contem itens</summary>
-    public class Bag
+    public class Bag : IStuff
     {
         /// <summary>Array que contém os itens da mochila</summary>
         private IStuff[] stuff;
 
         /// <summary>Número de itens na mochila</summary>
         public int StuffCount { get; private set; }
+
+        public float Value {
+            get {
+                float total = 0;
+
+                foreach (IStuff s in stuff) {
+                    if (s != null) {
+                        total += s.Value;
+                    }
+                }
+                return total;
+            }
+        }
+
+        public float Weight {
+            get {
+                float total = 0;
+
+                foreach (IStuff s in stuff) {
+                    if (s != null) {
+                        total += s.Weight;
+                    }
+                }
+                return total;
+            }
+        }
 
         /// <summary>Construtor que cria uma nova instância de mochila</summary>
         /// <param name="bagSize">Número máximo de itens que é possível colocar na mochila</param>
