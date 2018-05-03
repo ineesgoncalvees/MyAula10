@@ -5,7 +5,7 @@
     {
 
         /// <summary>Máximo de items na mochila (variável de classe, constante, implicitamente static)</summary>
-        private const int maxBagItems = 4;
+        private const int maxBagItems = 5;
 
         /// <summary>Peso base do jogador (variável de instância, read-only) </summary>
         private readonly float baseWeight;
@@ -27,7 +27,7 @@
         public Player(float baseWeight)
         {
             this.baseWeight = baseWeight;
-            BagOfStuff = new Bag(4);
+            BagOfStuff = new Bag(maxBagItems);
         }
     }
 }
