@@ -35,5 +35,9 @@
             Weight = weight;
         }
 
+        public override string ToString() {
+            return Type.ToString() + ", " + days + " dias";
+        }
+
     }
 }

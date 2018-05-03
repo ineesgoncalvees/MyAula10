@@ -39,6 +39,11 @@
                 NumberOfBullets--;
             }
         }
+
+        public override string ToString() {
+            return baseWeight.ToString() + ", " + bulletWeight + ", " + 
+                + NumberOfBullets + ", " + Value;
+        }
     }
 
 }
