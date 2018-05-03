@@ -39,11 +39,7 @@ namespace Aula10
             p.BagOfStuff.AddThing(new Gun(2.0f, 0.100f, 20, 300));
 
             // Quantos itens tem o jogador na mochila?
-            Console.WriteLine($"Nº de itens na mochila: {p.BagOfStuff.StuffCount}");
-
-            Console.WriteLine($"Valor: {p.BagOfStuff.Value}");
-
-            Console.WriteLine($"Peso: {p.BagOfStuff.Weight}");
+            Console.WriteLine(p.BagOfStuff);
 
             // Percorrer itens na mochila e tentar "imprimir" cada um
             for (int i = 0; i < p.BagOfStuff.StuffCount; i++)

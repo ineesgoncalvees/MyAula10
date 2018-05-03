@@ -73,5 +73,9 @@ namespace Aula10
             }
             return stuff[index];
         }
+
+        public override string ToString() {
+            return "A mochila tem " + StuffCount + " objetos " + ", o valor total é " + Value + " e pesa " + Weight;
+        }
     }
 }

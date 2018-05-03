@@ -41,8 +41,7 @@
         }
 
         public override string ToString() {
-            return baseWeight.ToString() + ", " + bulletWeight + ", " + 
-                + NumberOfBullets + ", " + Value;
+            return baseWeight + ", " + bulletWeight + ", " + NumberOfBullets + ", " + Value;
         }
     }
 
