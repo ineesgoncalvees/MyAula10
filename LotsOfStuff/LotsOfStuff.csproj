@@ -46,8 +46,10 @@
     <Compile Include="Food.cs" />
     <Compile Include="FoodType.cs" />
     <Compile Include="Gun.cs" />
+    <Compile Include="IHasKarma.cs" />
     <Compile Include="IHasWeight.cs" />
     <Compile Include="IStuff.cs" />
+    <Compile Include="ItemWithKarma.cs" />
     <Compile Include="IValuable.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

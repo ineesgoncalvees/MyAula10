@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Aula10
 {
     /// <summary>Classe que representa uma mochila ou saco que contem itens</summary>
-    public class Bag : IStuff
+    public class Bag : List<IStuff>, IStuff, IHasKarma
     {
         /// <summary>Array que contém os itens da mochila</summary>
         private IStuff[] stuff;
@@ -34,6 +35,23 @@ namespace Aula10
                     }
                 }
                 return total;
+            }
+        }
+
+        public float Karma {
+            get {
+                int nCenasCKarma = 0;
+                float total = 0;
+                Console.WriteLine(nCenasCKarma);
+
+                foreach (IStuff cena in this) {
+                    if (cena is IHasKarma) {
+                        total += (cena as IHasKarma).Karma;
+                        nCenasCKarma++;
+                    }
+                }
+
+                return total / nCenasCKarma;
             }
         }
 
@@ -75,7 +93,8 @@ namespace Aula10
         }
 
         public override string ToString() {
-            return "A mochila tem " + StuffCount + " objetos " + ", o valor total é " + Value + " e pesa " + Weight;
+            return "A mochila tem " + StuffCount + " objetos " + ", o valor total é " 
+                + Value + " e pesa " + Weight + " karma = " + Karma;
         }
     }
 }

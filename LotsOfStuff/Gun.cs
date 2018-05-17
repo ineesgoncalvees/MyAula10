@@ -1,7 +1,7 @@
 ﻿namespace Aula10
 {
     /// <summary>Classe que define uma pistola</summary>
-    public class Gun : IStuff
+    public class Gun : ItemWithKarma, IStuff
     {
         /// <summary> Peso base (variável de instância read-only)</summary>
         private readonly float baseWeight;
@@ -23,7 +23,7 @@
         /// <param name="bulletWeight">Peso de cada bala</param>
         /// <param name="numberOfBullets">Número inicial de balas</param>
         /// <param name="cost">Custo da arma</param>
-        public Gun(float baseWeight, float bulletWeight, int numberOfBullets, float value)
+        public Gun(float baseWeight, float bulletWeight, int numberOfBullets, float value) : base()
         {
             this.baseWeight = baseWeight;
             this.bulletWeight = bulletWeight;
@@ -41,8 +41,7 @@
         }
 
         public override string ToString() {
-            return baseWeight + ", " + bulletWeight + ", " + NumberOfBullets + ", " + Value;
+            return baseWeight + ", " + bulletWeight + ", " + NumberOfBullets + ", " + Value + " karma = " + Karma;
         }
     }
-
 }
